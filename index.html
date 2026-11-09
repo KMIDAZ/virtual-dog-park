@@ -7,13 +7,52 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="park"></div>
-    <div class="control-panel">
-        <button id="addBeagle">Add Beagle</button>
-        <button id="addGolden">Add Golden Retriever</button>
-        <button id="addPoodle">Add Poodle</button>
-        <button id="clearAll">Clear All Dogs</button>
-    </div>
+    <header class="header">
+        <h1>Virtual Dog Park</h1>
+        <p>Welcome to our dog encyclopedia! Learn about three lovely dog breeds.</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <img src="./assets/beagle.svg" alt="Illustration of a Beagle">
+            <h2>Beagle</h2>
+            <ul>
+                <li><strong>Size:</strong> Small to medium</li>
+                <li><strong>Personality:</strong> Curious, friendly, energetic</li>
+                <li><strong>Care:</strong> Needs daily walks and sniffing time; short coat is easy to groom.</li>
+            </ul>
+            <button class="pet-btn">🐾 Pet the dog</button>
+            <p class="count">Petted: <span>0</span></p>
+        </section>
+
+        <section class="card">
+            <img src="./assets/golden-retriever.svg" alt="Illustration of a Golden Retriever">
+            <h2>Golden Retriever</h2>
+            <ul>
+                <li><strong>Size:</strong> Large</li>
+                <li><strong>Personality:</strong> Gentle, loyal, eager to please</li>
+                <li><strong>Care:</strong> Loves fetch and swimming; long fur sheds a lot.</li>
+            </ul>
+            <button class="pet-btn">🐾 Pet the dog</button>
+            <p class="count">Petted: <span>0</span></p>
+        </section>
+
+        <section class="card">
+            <img src="./assets/poodle.svg" alt="Illustration of a Poodle">
+            <h2>Poodle</h2>
+            <ul>
+                <li><strong>Size:</strong> Standard / Miniature / Toy</li>
+                <li><strong>Personality:</strong> Smart, playful, quick learner</li>
+                <li><strong>Care:</strong> Curly hair needs regular trimming; highly trainable.</li>
+            </ul>
+            <button class="pet-btn">🐾 Pet the dog</button>
+            <p class="count">Petted: <span>0</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p id="footer-time"></p>
+    </footer>
 
     <script src="./script.js"></script>
 </body>

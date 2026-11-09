@@ -1,0 +1,31 @@
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <title>Illustration of a Poodle</title>
+  <!-- Top head pompom -->
+  <circle cx="70" cy="30" r="16" fill="#f0ece8"/>
+  <!-- Ear pompoms -->
+  <circle cx="48" cy="44" r="13" fill="#f0ece8"/>
+  <circle cx="92" cy="44" r="13" fill="#f0ece8"/>
+  <!-- Main head -->
+  <ellipse cx="70" cy="54" rx="24" ry="22" fill="#f0ece8"/>
+  <!-- Eyes -->
+  <circle cx="58" cy="50" r="2.8" fill="#222222"/>
+  <circle cx="82" cy="50" r="2.8" fill="#222222"/>
+  <circle cx="59" cy="49" r="1" fill="#ffffff"/>
+  <circle cx="83" cy="49" r="1" fill="#ffffff"/>
+  <!-- Snout -->
+  <ellipse cx="70" cy="60" rx="8" ry="6" fill="#e2d9d0"/>
+  <!-- Nose -->
+  <ellipse cx="70" cy="64" rx="4.5" ry="3.5" fill="#1c1c1c"/>
+  <!-- Mouth -->
+  <path d="M65 69 Q70 73 75 69" stroke="#222222" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Shoulder pompoms -->
+  <circle cx="38" cy="76" r="15" fill="#f0ece8"/>
+  <circle cx="102" cy="76" r="15" fill="#f0ece8"/>
+  <!-- Body -->
+  <ellipse cx="70" cy="88" rx="28" ry="24" fill="#f0ece8"/>
+  <!-- Ankle leg pompoms -->
+  <circle cx="50" cy="112" r="11" fill="#f0ece8"/>
+  <circle cx="90" cy="112" r="11" fill="#f0ece8"/>
+  <!-- Tail pompom -->
+  <circle cx="110" cy="54" r="11" fill="#f0ece8"/>
+</svg>

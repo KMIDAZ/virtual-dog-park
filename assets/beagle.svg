@@ -1,0 +1,31 @@
+<svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <title>Illustration of a Beagle</title>
+  <!-- Body -->
+  <ellipse cx="70" cy="84" rx="38" ry="34" fill="#f2c894"/>
+  <!-- Head -->
+  <circle cx="70" cy="52" r="30" fill="#f2c894"/>
+  <!-- Long floppy ears -->
+  <path d="M42 40 C22 30,18 62,34 76 C42 82,48 70,46 54 Z" fill="#8b572a"/>
+  <path d="M98 40 C118 30,122 62,106 76 C98 82,92 70,94 54 Z" fill="#8b572a"/>
+  <!-- Eye patches -->
+  <ellipse cx="52" cy="48" rx="11" ry="13" fill="#3c2820"/>
+  <ellipse cx="88" cy="48" rx="11" ry="13" fill="#3c2820"/>
+  <!-- Eyes -->
+  <circle cx="58" cy="48" r="3.2" fill="#1a1a1a"/>
+  <circle cx="82" cy="48" r="3.2" fill="#1a1a1a"/>
+  <circle cx="59" cy="47" r="1.2" fill="#ffffff"/>
+  <circle cx="83" cy="47" r="1.2" fill="#ffffff"/>
+  <!-- Muzzle white -->
+  <ellipse cx="70" cy="62" rx="14" ry="11" fill="#fff8f0"/>
+  <!-- Nose -->
+  <ellipse cx="70" cy="66" rx="6" ry="4.5" fill="#222222"/>
+  <!-- Smile mouth -->
+  <path d="M64 72 Q70 78 76 72" stroke="#222222" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  <!-- Neck marking -->
+  <path d="M56 76 Q70 84 84 76" fill="#ffffff"/>
+  <!-- Legs -->
+  <rect x="44" y="106" width="14" height="18" rx="7" fill="#f2c894"/>
+  <rect x="82" y="106" width="14" height="18" rx="7" fill="#f2c894"/>
+  <!-- Tail -->
+  <path d="M106 78 Q124 68 118 92" stroke="#8b572a" stroke-width="7" fill="none" stroke-linecap="round"/>
+</svg>
