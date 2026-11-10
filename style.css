@@ -202,3 +202,18 @@ footer {
   background-color: #ef5350;
   color: white;
 }
+#feedBtn {
+  background-color: #66bb6a;
+  color: white;
+}
+#feedBtn:hover {
+  background-color: #388e3c;
+}
+
+#playBtn {
+  background-color: #ffa726;
+  color: white;
+}
+#playBtn:hover {
+  background-color: #f57c00;
+}
