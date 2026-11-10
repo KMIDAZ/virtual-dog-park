@@ -12,14 +12,14 @@ const timeEl = document.getElementById('footer-time');
 function updateTime() {
     timeEl.textContent = "Page loaded at: " + new Date().toLocaleString();
 }
-updateTime();
 
-// ---------------- Round2 & Round3 宠物逻辑 + localStorage ----------------
+// ---------------- Round2 & Round3 ----------------
 const breedSelect = document.getElementById("breedSelect");
 const dogNameInput = document.getElementById("dogNameInput");
 const nameError = document.getElementById("nameError");
 const adoptBtn = document.getElementById("adoptBtn");
 const dogStatusPanel = document.getElementById("dogStatusPanel");
+const adoptFormWrap = document.querySelector(".adopt-form");
 
 const showDogName = document.getElementById("showDogName");
 const showBreed = document.getElementById("showBreed");
@@ -33,6 +33,7 @@ const nextDayBtn = document.getElementById("nextDayBtn");
 const resetBtn = document.getElementById("resetBtn");
 
 let pet = null;
+const STORAGE_KEY = "savedPet";
 
 //成长阶段
 function getGrowthStage(day){
@@ -41,28 +42,41 @@ function getGrowthStage(day){
     return "Adult Dog";
 }
 
-//渲染UI并保存本地
+//渲染UI
 function renderPet(){
     showDogName.textContent = pet.name;
     showBreed.textContent = pet.breed;
     showDay.textContent = pet.day;
     showStage.textContent = getGrowthStage(pet.day);
     showHappiness.textContent = pet.happiness;
-    localStorage.setItem("savedPet", JSON.stringify(pet));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(pet));
+}
+
+//根据是否有宠物控制页面区块显示隐藏
+function refreshPageState(){
+    if(pet){
+        adoptFormWrap.style.display = "none";
+        dogStatusPanel.hidden = false;
+        renderPet();
+    }else{
+        adoptFormWrap.style.display = "flex";
+        dogStatusPanel.hidden = true;
+        nameError.textContent = "";
+    }
 }
 
 //读取本地存储
 function loadPetFromStorage(){
-    const saved = localStorage.getItem("savedPet");
+    const saved = localStorage.getItem(STORAGE_KEY);
     if(saved){
         try{
             pet = JSON.parse(saved);
-            dogStatusPanel.hidden = false;
-            renderPet();
         }catch(e){
-            localStorage.removeItem("savedPet");
+            localStorage.removeItem(STORAGE_KEY);
+            pet = null;
         }
     }
+    refreshPageState();
 }
 
 //领养按钮
@@ -86,9 +100,8 @@ adoptBtn.addEventListener("click", ()=>{
         day: 1,
         happiness:50
     };
-    renderPet();
-    dogStatusPanel.hidden = false;
     dogNameInput.value = "";
+    refreshPageState();
 })
 
 //喂食
@@ -105,7 +118,7 @@ playBtn.addEventListener("click", ()=>{
     renderPet();
 })
 
-//下一天：天数+1，快乐减10，最低0
+//下一天
 nextDayBtn.addEventListener("click", ()=>{
     if(!pet) return;
     pet.day += 1;
@@ -113,12 +126,17 @@ nextDayBtn.addEventListener("click", ()=>{
     renderPet();
 })
 
-//重置，回到领养
+//重置，带confirm确认弹窗（作业要求）
 resetBtn.addEventListener("click", ()=>{
+    const ok = confirm("Are you sure you want to start over? All progress will be lost.");
+    if(!ok) return;
     pet = null;
-    localStorage.removeItem("savedPet");
-    dogStatusPanel.hidden = true;
+    localStorage.removeItem(STORAGE_KEY);
+    refreshPageState();
 })
 
-//页面加载读取宠物
-loadPetFromStorage();
+//DOM加载完毕初始化
+document.addEventListener("DOMContentLoaded",()=>{
+    updateTime();
+    loadPetFromStorage();
+})
