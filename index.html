@@ -13,14 +13,13 @@
     </header>
 
     <main class="container">
+        <!-- Round1 原版三卡片，不动！ -->
         <section class="card">
             <img src="./assets/beagle.svg" alt="Illustration of a Beagle">
             <h2>Beagle</h2>
-            <ul>
-                <li><strong>Size:</strong> Small to medium</li>
-                <li><strong>Personality:</strong> Curious, friendly, energetic</li>
-                <li><strong>Care:</strong> Needs daily walks and sniffing time; short coat is easy to groom.</li>
-            </ul>
+            <p><strong>Size:</strong> Small to medium</p>
+            <p><strong>Personality:</strong> Curious, friendly, energetic</p>
+            <p><strong>Care:</strong> Needs daily walks and sniffing time; short coat is easy to groom.</p>
             <button class="pet-btn">🐾 Pet the dog</button>
             <p class="count">Petted: <span>0</span></p>
         </section>
@@ -28,11 +27,9 @@
         <section class="card">
             <img src="./assets/golden-retriever.svg" alt="Illustration of a Golden Retriever">
             <h2>Golden Retriever</h2>
-            <ul>
-                <li><strong>Size:</strong> Large</li>
-                <li><strong>Personality:</strong> Gentle, loyal, eager to please</li>
-                <li><strong>Care:</strong> Loves fetch and swimming; long fur sheds a lot.</li>
-            </ul>
+            <p><strong>Size:</strong> Large</p>
+            <p><strong>Personality:</strong> Gentle, loyal, eager to please</p>
+            <p><strong>Care:</strong> Loves fetch and swimming; long fur sheds a lot.</p>
             <button class="pet-btn">🐾 Pet the dog</button>
             <p class="count">Petted: <span>0</span></p>
         </section>
@@ -40,15 +37,50 @@
         <section class="card">
             <img src="./assets/poodle.svg" alt="Illustration of a Poodle">
             <h2>Poodle</h2>
-            <ul>
-                <li><strong>Size:</strong> Standard / Miniature / Toy</li>
-                <li><strong>Personality:</strong> Smart, playful, quick learner</li>
-                <li><strong>Care:</strong> Curly hair needs regular trimming; highly trainable.</li>
-            </ul>
+            <p><strong>Size:</strong> Standard / Miniature / Toy</p>
+            <p><strong>Personality:</strong> Smart, playful, quick learner</p>
+            <p><strong>Care:</strong> Curly hair needs regular trimming; highly trainable.</p>
             <button class="pet-btn">🐾 Pet the dog</button>
             <p class="count">Petted: <span>0</span></p>
         </section>
     </main>
+
+    <!-- ========== Round2 领养区域（新加在卡片下面） ========== -->
+    <section class="adopt-section">
+        <h2>My Virtual Dog — Adopt your pet</h2>
+        <div class="adopt-form">
+            <div>
+                <label for="breedSelect">Choose Breed:</label>
+                <select id="breedSelect">
+                    <option value="Beagle">Beagle</option>
+                    <option value="Golden Retriever">Golden Retriever</option>
+                    <option value="Poodle">Poodle</option>
+                </select>
+            </div>
+            <div>
+                <label for="dogNameInput">Dog Name (1‑20 characters):</label>
+                <input id="dogNameInput" type="text" maxlength="20" placeholder="Enter dog name">
+            </div>
+            <div class="error-text" id="nameError"></div>
+            <button id="adoptBtn">Adopt Dog</button>
+        </div>
+
+        <div class="dog-status-panel" id="dogStatusPanel" hidden>
+    <h3>Your Adopted Dog</h3>
+    <p>Name: <span id="showDogName"></span></p>
+    <p>Breed: <span id="showBreed"></span></p>
+    <p>Day: <span id="showDay"></span></p>
+    <p>Growth Stage: <span id="showStage"></span></p>
+    <p>Happiness: <span id="showHappiness"></span>/100</p>
+    <div class="action-buttons">
+        <button id="feedBtn">Feed</button>
+        <button id="playBtn">Play</button>
+        <button id="nextDayBtn">Next Day</button>
+        <button id="resetBtn">Start Over</button>
+    </div>
+</div>
+
+    </section>
 
     <footer>
         <p id="footer-time"></p>
